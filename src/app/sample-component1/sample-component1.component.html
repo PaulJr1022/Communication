@@ -1,0 +1,19 @@
+<div class="container mt-4">
+  <h2>Parent Component</h2>
+
+  <div class="mb-3">
+    <label for="textInput" class="form-label">Enter Text:</label>
+    <input type="text" class="form-control" id="textInput" [(ngModel)]="userInput">
+  </div>
+
+  <button class="btn btn-primary mb-3" (click)="saveData()">Save</button>
+
+  <h5>Stored Data:</h5>
+
+  <pre>{{ textData | json }}</pre>
+
+
+  <app-sample-component2 [data]="textData"></app-sample-component2>
+
+  <app-sample-component3></app-sample-component3>
+</div>
